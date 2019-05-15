@@ -4,6 +4,8 @@ const functions     = require('firebase-functions');
 const admin         = require('firebase-admin');
 const bodyParser    = require('body-parser');
 
+admin.initializeApp(functions.config().firebase);
+
 const app = express();
 app.use(cors({origin : true}));
 app.use(bodyParser())
